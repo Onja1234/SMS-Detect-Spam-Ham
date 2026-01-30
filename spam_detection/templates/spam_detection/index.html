@@ -12,11 +12,19 @@
 </head>
 
 <body class="container mt-5">
-
-<h1 class="text-primary">Spam Detection App</h1>
-<p>Bienvenue dans ton application</p>
-
-<button class="btn btn-success">Tester</button>
-
+    <form method="POST" action="{% url 'detect' %}">
+        {% csrf_token %}
+    
+        <textarea 
+            name="message"
+            class="form-control mb-3"
+            rows="4"
+            placeholder="Enter message..."
+            required></textarea>
+    
+        <button type="submit" class="btn btn-primary">
+            Detecter
+        </button>
+    </form>
 </body>
 </html>
