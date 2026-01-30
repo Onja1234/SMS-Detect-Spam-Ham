@@ -27,3 +27,6 @@ media/
 # OS
 .DS_Store
 Thumbs.db
+
+# Dossier généré par collectstatic
+staticfiles/
