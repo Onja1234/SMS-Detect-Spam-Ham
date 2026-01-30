@@ -1,66 +1,55 @@
-#Nom etablissement : ISPM , Institut Supérieur Polytechnique de Madagascar
+# SMS Detect Spam & Ham
 
-#Site de web de l'etablissement : www.ispm-edu.com
+## Informations sur l'établissement
 
-#Nom de membres de groupe Igglia : 
-    #WEB 
-        NOFINIAINA NATOLOJANAHARY Tambatra
-        RABEMANANTSIMBA Onja Faneva Rinoh
-      
-    #Machine Learning :
-        RAZAFINDRALAMBO Lafatra
-        ANDRIAMIALINIRINA Fanantenana
-        RASOLOHERISON Nambinina
-        RANDIMBIARISOA Santatriniaina Charles Ricardo
+*   **Nom de l'établissement :** ISPM, Institut Supérieur Polytechnique de Madagascar
+*   **Site web de l'établissement :** [www.ispm-edu.com](http://www.ispm-edu.com)
 
-#Description du stack technologiques :
-    Django Python pour l'interface web,
-    Pour le ML : 
-        ScikitLearn, NlTK, Pandas, Numpy, joblib  
+## Membres du groupe IGGLIA5
 
-#Description du processus et du modèle :
+### WEB
+*   NOFINIAINA NATOLOJANAHARY Tambatra
+*   RABEMANANTSIMBA Onja Faneva Rinoh
 
-    Dataset 
-        ↓
-    Prétraitement des données
-        ↓
-    Préparation de données
-        ↓
-    Vectorisation 
-        ↓
-    Entrainement des modèles
-        ↓
-    Service Python (predict_spam)
-        ↓
-    View Django
-        ↓
-    Interface Web (Bootstrap)
-        ↓
-    Déploiement (Render )
+### Machine Learning
+*   RAZAFINDRALAMBO Lafatra
+*   ANDRIAMIALINIRINA Fanantenana
+*   RASOLOHERISON Nambinina
+*   RANDIMBIARISOA Santatriniaina Charles Ricardo
 
-#Les methodes ML : 
+## Description du stack technologique
 
-    Apprentissage supervisé pour la classification des messages en SPAM et HAM
+*   **Django Python** pour l'interface web.
+*   **Pour le ML :** Scikit-Learn, NLTK, Pandas, NumPy, joblib.
 
-    Utilisation de données textuelles annotées (messages courts)
+## Description du processus et du modèle
 
-    Prétraitement du texte : mise en minuscules, suppression de la ponctuation et des mots vides (stop words)
+1.  **Dataset**
+2.  **Prétraitement des données**
+3.  **Préparation des données**
+4.  **Vectorisation**
+5.  **Entraînement des modèles**
+6.  **Service Python** (`predict_spam`)
+7.  **View Django**
+8.  **Interface Web** (Bootstrap)
+9.  **Déploiement** (Render)
 
-    Représentation des messages par la méthode TF-IDF
+## Les méthodes ML
 
-    Utilisation de n-grammes (unigrammes et bigrammes) pour capturer le contexte
+*   Apprentissage supervisé pour la classification des messages en SPAM et HAM.
+*   Utilisation de données textuelles annotées (messages courts).
+*   Prétraitement du texte : mise en minuscules, suppression de la ponctuation et des mots vides (*stop words*).
+*   Représentation des messages par la méthode TF-IDF.
+*   Utilisation de n-grammes (unigrammes et bigrammes) pour capturer le contexte.
+*   Modèle de classification basé sur la régression logistique.
+*   Prédiction accompagnée d’un score de confiance (probabilité).
+*   Évaluation des performances à l’aide de l’accuracy et du F1-score.
+*   Intégration du modèle dans une application web Django.
 
-    Modèle de classification basé sur la régression logistique
+## Les datasets utilisés
 
-    Prédiction accompagnée d’un score de confiance (probabilité)
+*   KaggleHUB : Multi-spam 
 
-    Évaluation des performances à l’aide de l’accuracy et du F1-score
+## Lien vers l'application web hébergée
 
-    Intégration du modèle dans une application web Django      
-
-#Les datasets Utilisés : 
-    KaggleHUB 
-
-#Lien vers l'application web hebergé : 
-    https://spam-ham-detector-4m22.onrender.com
-
+[https://spam-ham-detector-4m22.onrender.com](https://spam-ham-detector-4m22.onrender.com)

@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Spam Detection | ISPM</title>
@@ -12,56 +13,51 @@
     <link rel="stylesheet" href="{% static 'spam_detection/style.css' %}">
 </head>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const textarea = document.querySelector("textarea");
+    document.addEventListener("DOMContentLoaded", function () {
+        const textarea = document.querySelector("textarea");
 
-    textarea.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            this.form.submit();
-        }
+        textarea.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                this.form.submit();
+            }
+        });
     });
-});
 </script>
 
 <body class="bg-light">
 
-<div class="container vh-100 d-flex align-items-center justify-content-center">
-    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
-        <div class="text-center mb-4">
-            <img src="{% static 'spam_detection/logo_ispm.webp' %}" 
-                 alt="ISPM Logo" 
-                 class="mb-3"
-                 style="width: 150px;">
-            
-            <h3 class="fw-bold">Detecteur de SPAM </h3>
-            <p class="text-muted">
-                Groupe <strong>The boys</strong> IGGLIA 5
-            </p>
+    <div class="container vh-100 d-flex align-items-center justify-content-center">
+        <div class="card p-4" style="max-width: 600px; width: 100%;">
+            <div class="text-center mb-4">
+                <img src="{% static 'spam_detection/logo_ispm.webp' %}" alt="ISPM Logo" class="mb-3"
+                    style="width: 150px;">
+
+                <h3 class="fw-bold">Detecteur de SPAM </h3>
+                <p class="text-muted">
+                    TP Machine Learning IGGLIA 5
+                </p>
+            </div>
+            <form method="POST" action="{% url 'detect' %}">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">
+                        Entrez votre message
+                    </label>
+                    <textarea name="message" class="form-control" rows="4" placeholder="Tapez votre message ici..."
+                        required></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Détecter
+                    </button>
+                </div>
+            </form>
         </div>
-        <form method="POST" action="{% url 'detect' %}">
-            {% csrf_token %}
-
-            <div class="mb-3">
-                <label class="form-label fw-semibold">
-                    Entrez votre message
-                </label>
-                <textarea 
-                    name="message"
-                    class="form-control"
-                    rows="4"
-                    placeholder="Tapez votre message ici..."
-                    required></textarea>
-            </div>
-
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg">
-                    Détecter
-                </button>
-            </div>
-        </form>
     </div>
-</div>
 
 </body>
+
 </html>
