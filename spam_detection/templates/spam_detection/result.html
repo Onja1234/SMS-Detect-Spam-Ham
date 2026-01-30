@@ -30,13 +30,13 @@
         alert-success
     {% endif %}
 ">
-    <h4>Message Type: {{ result.label }}</h4>
-    <p>Confidence: {{ result.confidence }}</p>
+    <h4>Type de message : {{ result.label }}</h4>
+    <p>score de confidence: {{ result.confidence }}</p>
 </div>
 {% endif %}
 
 <a href="{% url 'home' %}" class="btn btn-secondary">
-    Try another message
+    Essayer un autre message
 </a>
 
 </body>
